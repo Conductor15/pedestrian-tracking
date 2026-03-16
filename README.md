@@ -1,12 +1,13 @@
 # Pedestrian Tracking with YOLOv8 and DeepSORT
 
-## Demo
+## 1. Demo
 Pedestrian tracking using YOLOv8 detector and DeepSORT tracker.
+
 ![Tracking Demo](demo/demo_1s.gif)
 
-Full video: [output_video.avi](demo/demo_1s.avi)
+Full video: [demo_1s.mp4](demo/demo_1s.mp4)
 
-## Overview
+## 2. Overview
 This project implements a multi-object pedestrian tracking system that combines a deep learning–based object detector with an appearance-based tracking algorithm.
 
 Pedestrians are detected using Ultralytics YOLOv8 and tracked across frames using DeepSORT.
@@ -24,7 +25,7 @@ Such tracking systems are widely used in:
 
     - retail analytics
 
-## Project Structure
+## 3. Project Structure
 ```
     pedestrian-tracking
     │
@@ -66,26 +67,25 @@ Such tracking systems are widely used in:
     └── README.md
 ```
 
-## Dataset
+## 4. Dataset
 This project uses the MOT17 dataset, a widely used benchmark for multi-object pedestrian tracking.
 
 The dataset contains video sequences with frame-level bounding box annotations for pedestrians, making it suitable for training pedestrian detectors and evaluating tracking algorithms.
 
 Due to its large size, the dataset is not included in this repository.
 
-## Installation
-## Installation
+## 5. Installation
 
 Follow the steps below to set up the project environment.
 
-### 1. Clone the repository
+### 5.1. Clone the repository
 
 ```bash
 git clone https://github.com/Conductor15/pedestrian-tracking.git
 cd pedestrian-tracking
 ```
 
-### 2. Install dependencies
+### 5.2. Install dependencies
 
 Install the required Python packages:
 ```bash
@@ -93,8 +93,8 @@ make install
 ```
 After installation, the environment will contain all dependencies required for training the detector and running the tracking pipeline.
 
-## Data Preparation
-### 1. Download
+## 6. Data Preparation
+### 6.1. Download
 
 You can download the dataset from Kaggle:
 
@@ -103,7 +103,7 @@ You can download the dataset from Kaggle:
 After downloading, extract the dataset and place it in `data/raw/`
 
 Detailed instructions for dataset organization can be found in `data/raw/notes.md`
-### 2. Processing
+### 6.2. Processing
 
 Once the dataset is placed in the correct directory, run the preprocessing pipeline:
 ```bash
@@ -119,7 +119,7 @@ This step will:
 
 - store the processed dataset in `data/processed/`
 
-## Training Detector
+## 7. Training Detector
 
 The pedestrian detector is trained using Ultralytics YOLOv8 on the processed dataset.
 
@@ -149,7 +149,7 @@ This directory contains:
 
 The trained detector weights will be saved in the `models/` directory.
 
-## Tracking Pipeline
+## 8. Tracking Pipeline
 The tracking pipeline combines object detection with multi-object tracking to assign consistent IDs to pedestrians across video frames.
 
 This project uses:
@@ -174,8 +174,8 @@ The pipeline performs the following steps:
 - Assign and maintain unique tracking IDs
 
 - Tracking results will be saved in `outputs/`
-## Results
-### 1. Detector Performance
+## 9. Results
+### 9.1. Detector Performance
 
 The pedestrian detector was trained and evaluated using Ultralytics YOLOv8 on the MOT17 dataset.
 
@@ -188,7 +188,7 @@ mAP@0.5	        0.901
 mAP@0.5:0.95	0.652
 
 The detector achieves strong performance for pedestrian detection in crowded scenes, which provides reliable inputs for the multi-object tracking pipeline.
-### 2.Tracking Demo
+### 9.2.Tracking Demo
 
 The tracking pipeline combines the YOLOv8 detector with DeepSORT to maintain consistent pedestrian identities across frames.
 
@@ -200,7 +200,8 @@ The tracking pipeline combines the YOLOv8 detector with DeepSORT to maintain con
 
 - consistent identity tracking across frames
 
-Full video output: `demo/output_video.avi`
+Full video output: `demo/demo_1s.mp4`
+
 ## Acknowledgements
 This project builds upon several open-source works in the fields of object detection and multi-object tracking.
 
