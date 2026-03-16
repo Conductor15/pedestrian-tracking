@@ -32,8 +32,11 @@ Thumbs.db
 # =========================
 # Data (datasets)
 # =========================
-data/raw/
-data/processed/
+data/raw/*
+data/processed/*
+
+!data/raw/notes.md
+!data/processed/notes.md
 
 # =========================
 # Training outputs
