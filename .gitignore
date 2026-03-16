@@ -43,6 +43,3 @@ data/processed/*
 # =========================
 runs/
 outputs/
-
-*.mp4
-*.avi
