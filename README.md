@@ -15,15 +15,15 @@ The system assigns persistent IDs to pedestrians and maintains identity consiste
 
 Such tracking systems are widely used in:
 
-    - intelligent surveillance systems
+- intelligent surveillance systems
 
-    - crowd analysis
+- crowd analysis
 
-    - smart city monitoring
+- smart city monitoring
 
-    - autonomous driving perception
+- autonomous driving perception
 
-    - retail analytics
+- retail analytics
 
 ## 3. Project Structure
 ```
