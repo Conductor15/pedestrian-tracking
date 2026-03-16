@@ -33,7 +33,7 @@ Thumbs.db
 # Data (datasets)
 # =========================
 data/raw/
-data/processed
+data/processed/
 
 # =========================
 # Training outputs
